@@ -1,0 +1,76 @@
+@startuml
+left to right direction
+skinparam ranksep 400
+
+
+component "VaraWeb" {
+  [AccionesYResultadosController]
+  [AvisoController]
+  [EspecieController]
+  [EspecimenController]
+  [FormatoGeneralController]
+  [HomeController]
+  [RegistroMorfometricoMisticetosController]
+  [RegistroMorfometricoOdontocetosController]
+  [RegistroMorfometricoPinnipedosController]
+  [RegistroMorfometricoSireniosController]
+  [SolicitudesController]
+  [SoloOrganismosVivosController]
+  [VaramientoMasivoController]
+
+  component "Api" {
+    [AutenticacionControllerApi] --> () Login : provee
+    [AutenticacionControllerApi] -- () RegistrarUsuarioExperto : provee
+    [AutenticacionControllerApi] -- () RecuperarContraseña : provee
+
+    [AvisoApiControllerApi] -- () ReporteAviso : provee
+    [AvisoApiControllerApi] -- () ReporteVaramientoMasivo : provee
+    [AvisoApiControllerApi] -- () ReporteVaramientoIndividual : provee
+
+    [EspecieApiControllerApi]
+    [RecorridoControllerApi] -- () GuardarRecorrido
+    [SeedingControllerApi]
+  }
+}
+
+
+component "AppMobiles" {
+  component "VaraAppx" {
+    [RecorridoPage]
+    [ReportarEspecimenPage]
+    [OrdenPage]
+    [FormatoIndividualPage]
+
+    [OrdenPage] -- [ReportarEspecimenPage]
+
+    note right of [ReportarEspecimenPage]
+      Para reportar una especie primero
+      se necesita saber a que orden pretenece
+      - Misticeto
+      - Odontoceto
+      - Sirenio
+      - Pinnipedo
+    end note
+  }
+
+  component "VaraApp" {
+    component "AuthPages" {
+      [LoginPage]
+      [RegistroCientificoPage]
+      [RecuperarContraseñaPage]
+    }
+
+    [RecommendationPage]
+    [AvisoPage]
+  }
+}
+
+[LoginPage] .. Login : usa
+[RegistroCientificoPage] .. RegistrarUsuarioExperto : usa
+[RecuperarContraseñaPage] .. RecuperarContraseña : usa
+[AvisoPage] .. ReporteAviso : usa
+[ReportarEspecimenPage] .. ReporteVaramientoMasivo : usa
+[FormatoIndividualPage] .. ReporteVaramientoIndividual : usa
+[RecorridoPage] .. GuardarRecorrido : usa
+
+@enduml

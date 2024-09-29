@@ -1,0 +1,184 @@
+specification {
+    element actor {
+        style {
+            shape : person
+        }
+    }
+    element system
+    element component
+    element container
+    element codigo {
+        style{
+            color secondary
+        }
+    }
+    element bd {
+        technology "SQL server"
+        style {
+            shape cylinder
+            color blue
+            icon https://icon.icepanel.io/Technology/svg/Microsoft-SQL-Server.svg
+        }
+    }
+}
+
+model {
+    cientifico = actor {
+        title "Científico"
+        description "Experto en el tema de varamientos de registro de mamiferos marinos varados"
+    }
+    observador = actor {
+        title "Observador"
+        description "Esta persona no es una experta en el area pero puede reportar un varamiento"
+
+    }
+    varasys = system {
+        title "Sistema de registro de varamientos"
+        style {
+            opacity 40%
+        }
+        varaweb = container {
+            style {
+                color secondary
+                opacity 40%
+            }
+            title "VaraWeb"
+            basededatos = bd {
+                title "Base de datos"
+            }
+            api = container {
+                style {
+                    opacity 30%
+                    icon tech:net
+                }
+                title "Api rest"
+
+                AutenticacionController = container {
+                    description "Logica de logeo"
+                    registrarUsuario = codigo {
+                        description "Endpoint"
+                    }
+                    IniciarSesionVaraAppX = codigo {
+                        description "Endpoint"
+                    }
+                    verificarToken = codigo {
+                        description "Endpoint"
+                    }
+                    usuario = codigo {
+                        description "Endpoint
+                        -Obtiene información de un usuario auntenticado
+                        "
+                    }
+
+
+
+                }
+                AvisoController = container {
+                    description "Logica para registrar un registro de mamiferos marinos"
+                    reportar = codigo {
+                        description "Endpoint"
+                    }
+                    aviso = codigo {
+                        description "Endpoint"
+                    }
+                    avisos = codigo {
+                        description "Endpoint"
+                    }
+
+
+                }
+                EspecieController = container {
+                    
+                    obtenerespecion = codigo  "Obtener especie" {
+                         description "Endpoint"
+                    }
+
+                }
+                RecorridoController = container {
+
+                }
+                SeedingController = container {
+
+                }
+
+                varaapp -> AutenticacionController "Se autentifica y otiene información de autenticación"
+                varaappx -> AutenticacionController "Se autentifica y otiene información de autenticación"
+
+                varaapp -> AvisoController "Obtiene informacion de los avisos y reporta un varamiento"
+                varaappx -> AvisoController "Obtiene informacion de los avisos y reporta un varamiento"
+
+
+                
+
+
+            }
+            clientevaraweb = container {
+                style{
+                    icon tech:net
+                    color:sky
+                }
+                title "Web de varaweb"
+                description "Es la interfaz gráfica de Varaweb."
+            }
+
+        }
+        varaapp = container {
+            title "VaraApp"
+            style {
+                shape : mobile
+            }
+        }
+        varaappx = container {
+            style {
+                shape : mobile
+            }
+        }
+        varaappx -> api "Hace peticiones" "https"
+        clientevaraweb -> api "Hace peticiones" "https"
+        varaapp -> api "Hace peticiones" "https"
+        api -> basededatos "Se conecta a la base de datos" "SQL"
+
+    }
+
+
+    cientifico -> varaappx "registra información especializada de los varamientos"
+    cientifico -> varaweb "Observa los regrsitros de varamientos"
+    observador -> varaapp "Consulta recomendaciones y tambien puede reportar un avistamiento"
+
+}
+
+views {
+    view index {
+        title "[context diagram] Contexto del sistema de registro de varamientos"
+        description "Este diagrama es para personas no tecnicas"
+        include
+            *,
+            varasys.*,
+    }
+
+    view container of varasys {
+        title "[container diagram] Vista del contenedor varasys"
+        include
+            varasys.*,
+            varasys,
+            varaweb,
+            varaweb.*
+    }
+
+    view component of api {
+        include
+            *,
+            api.AutenticacionController.*,
+            api.AvisoController.*,
+            api.EspecieController.*,
+            api.RecorridoController.*,
+            api.SeedingController.*,
+            api <-> basededatos,
+            basededatos <-> api,
+            varaapp,
+            varaappx
+
+      autoLayout LeftRight
+    }
+
+}
