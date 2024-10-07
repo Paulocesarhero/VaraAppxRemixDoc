@@ -1,0 +1,347 @@
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>800</x><y>245</y><w>145</w><h>50</h></coordinates><panel_attributes>LoginPage
+--
+
+--
++Login(username: str, password: str): bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1160</x><y>115</y><w>145</w><h>60</h></coordinates><panel_attributes>RecuperarContraseñaPage
+--
+
+--
++EnviarCorreo(username: str): bool
++ConfirmarCodigo(codigo:str): bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>10</y><w>50</w><h>30</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+VaraAppx
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>975</x><y>0</y><w>50</w><h>25</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+VaraApp</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>20</y><w>130</w><h>235</h></coordinates><panel_attributes>usa
+</panel_attributes><additional_attributes>240;10;180;420;10;450</additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>20</y><w>95</w><h>105</h></coordinates><panel_attributes>usa
+</panel_attributes><additional_attributes>10;10;170;40;170;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>145</y><w>145</w><h>55</h></coordinates><panel_attributes>RegistrarCientificoPage
+--
+
+--
++RegistrarCientifico(cientifico: Cientifico): bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>20</y><w>130</w><h>135</h></coordinates><panel_attributes>usa
+</panel_attributes><additional_attributes>240;10;10;70;10;250</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>460</y><w>145</w><h>60</h></coordinates><panel_attributes>StrandingPage
+--
+
+--
++ReportarAvisoPorCientifico(aviso: Aviso): bool
++RepotarEspecimen(especimen: Especmen)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1055</x><y>250</y><w>145</w><h>60</h></coordinates><panel_attributes>AvisoPage
+--
+
+
+--
++ReportarAviso(aviso: Aviso): bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1025</x><y>115</y><w>125</w><h>60</h></coordinates><panel_attributes>RecomendationsPage
+--
+
+--
++MostrarRecomendaciones(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>10</y><w>220</w><h>115</h></coordinates><panel_attributes>usa
+</panel_attributes><additional_attributes>10;10;420;20;420;210</additional_attributes></element><element><id>Relation</id><coordinates><x>975</x><y>20</y><w>90</w><h>260</h></coordinates><panel_attributes>usa
+</panel_attributes><additional_attributes>30;10;10;350;160;500</additional_attributes></element><element><id>Relation</id><coordinates><x>425</x><y>35</y><w>25</w><h>435</h></coordinates><panel_attributes>usa </panel_attributes><additional_attributes>10;10;10;850</additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>260</y><w>145</w><h>60</h></coordinates><panel_attributes>RecorridoPage
+--
+
+--
++RegistrarRecorrido(recorrdo: Recorrido): bool</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>425</x><y>35</y><w>180</w><h>235</h></coordinates><panel_attributes>usa </panel_attributes><additional_attributes>10;10;10;380;340;380;290;450</additional_attributes></element><element><id>UMLClass</id><coordinates><x>795</x><y>490</y><w>105</w><h>95</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+Aviso
+
+--
++NombreDelInformante: string
++DireccionDelInformante: string
++TelefonoDelInformante: string
++Acantilado: bool
++FacilAcceso: bool
++LugarDondeSeVio: Lugar
++Sustrato: Sustrato
++FechaDeAvistamiento: DateTime
++Observaciones: string
++TipoDeAnimal: TipoDeAnimal
++CondicionDeAnimal: CondicionDelAnimal
++CantidadDeAnimales: float
++Localizacion: Localizacion
++Usuario: Usuario
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+-- Resp2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>895</x><y>305</y><w>250</w><h>235</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;450;480;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1060</y><w>275</w><h>380</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+RegistroMorfometricoMisticetos
+--
++ Id: int
++ NumeroDeBarbas: float?
++ BarbasColor: string
++ BarbaLargo: float?
++ BarbaAncho: float?
++ M1LongitudTotalLR: float?
++ M1LongitudTotalC: float?
++ M2LongitudRostroAlCentroDelAnoLR: float?
++ M2LongitudRostroAlCentroDelAnoC: float?
++ M3LongitudRostroAlCentroDeLaAberturaGenitalLR: float?
++ M3LongitudRostroAlCentroDeLaAberturaGenitalC: float?
++ M4LongitudDelRostroALosPlieguesGularesLR: float?
++ M4LongitudDelRostroALosPlieguesGularesC: float?
++ M5LongitudDelRostroAlCentroDelOmbligoLR: float?
++ M5LongitudDelRostroAlCentroDelOmbligoC: float?
++ M6LongitudDelRostroAPuntaDeAletaDorsalLR: float?
++ M7LongitudDelRostroAAletaDorsalEnParteAnteriorLR: float?
++ M7LongitudDelRostroAAletaDorsalEnParteAnteriorC: float?
++ M8LongitudDelRostroALaInsercionDeLaAletaPectoralLR: float?
++ M8LongitudDelRostroALaInsercionDeLaAletaPectoralC: float?
++ M9LongitudDelRostroAlCentroDelOrificioRespiratorioLR: float?
++ M9LongitudDelRostroAlCentroDelOrificioRespiratorioC: float?
++ M10LongitudDelRostroAlCentroDelOjoLR: float?
++ M10LongitudDelRostroAlCentroDelOjoC: float?
++ M11LongitudDelRostroAlCentroDelOjoLR: float?
++ M11LongitudDelRostroAlCentroDelOjoC: float?
++ M12LongitudDelRostroALaComisuraDeLaBocaLR: float?
++ M13AnchoMaximoDelRostroLR: float?
++ M14NumeroDePlieguesGularesLR: float?
++ M15NumeroDeProtuberanciasDorsalesLR: float?
++ M16ProyeccionDelMaxilarLR: float?
++ M17DistanciaMaximaDeOjoAOjoC: float?
++ M18AnchoMaximoDelOjoC: float?
++ M19LongitudMaximaDelOjoC: float?
++ M20LongitudMaximaDelCentroDelOjoALaComisuraDeLaBocaLR: float?
++ M20LongitudMaximaDelCentroDelOjoALaComisuraDeLaBocaC: float?
++ M21LongitudMaximaDelCentroDelOjoAlCentroDelOidoLR: float?
++ M21LongitudMaximaDelCentroDelOjoAlCentroDelOidoC: float?
++ M22LongitudMaximaDelCentroDelOjoAlCentroDeLosOrificiosRespiratoriosLR: float?
++ M22LongitudMaximaDelCentroDelOjoAlCentroDeLosOrificiosRespiratoriosC: float?
++ M23LongitudMaximaDeLosOrificiosRespiratoriosC: float?
++ M24AnchoMaximoDeLosOrificiosRespiratorios: float?</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>355</x><y>1060</y><w>275</w><h>380</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+RegistroMorfometricoOdontocetos
+--
+- Id: int
+- MaxilarIzquierdo: float?
+- MaxilarDerecho: float?
+- MandibulaIzquierda: float?
+- MandibulaDerecha: float?
+- M1LongitudTotalLR: float?
+- M1LongitudTotalC: float?
+- M2LongitudRostroAlCentroDelAnoLR: float?
+- M2LongitudRostroAlCentroDelAnoC: float?
+- M3LongitudRostroAlCentroDeLaAberturaGenitalLR: float?
+- M3LongitudRostroAlCentroDeLaAberturaGenitalC: float?
+- M4LongitudDelRostroAlCentroDelOmbligoLR: float?
+- M4LongitudDelRostroAlCentroDelOmbligoC: float?
+- M5LongitudDelRostroAPuntaDeAletaDorsalLR: float?
+- M6LongitudDelRostroAAletaDorsalEnParteAnteriorLR: float?
+- M6LongitudDelRostroAAletaDorsalEnParteAnteriorC: float?
+- M7LongitudDelRostroAAletaPectoralEnparteAnteriorLR: float?
+- M7LongitudDelRostroAAletaPectoralEnparteAnteriorC: float?
+- M8LongitudDelRostroAlCentroDelOrificioRespiratorioLR: float?
+- M8LongitudDelRostroAlCentroDelOrificioRespiratorioC: float?
+- M9LongitudDeLaPuntaDelRostroALaBaseDelRostroLR: float?
+- M9LongitudDeLaPuntaDelRostroALaBaseDelRostroC: float?
+- M10LongitudDelRostroAlCentroDelOidoLR: float?
+- M10LongitudDelRostroAlCentroDelOidoC: float?
+- M11LongitudDelRostroAlCentroDelOjoLR: float?
+- M11LongitudDelRostroAlCentroDelOjoC: float?
+- M12LongitudDelRostroALaComisuraDeLaBocaLR: float?
+- M12LongitudDelRostroALaComisuraDeLaBocaC: float?
+- M13AnchoMaximoDelRostroLR: float?
+- M14ProyeccionDelMaxilarOMandibulaLR: float?
+- M15DistanciaMaximaDeOjoAOjoC: float?
+- M16AnchoMaximoDelOjoC: float?
+- M17LongitudMaximaDelOjoC: float?
+- M18LongitudMaximaDelCentroDelOjoALaComisuraDeLaBocaLR: float?
+- M18LongitudMaximaDelCentroDelOjoALaComisuraDeLaBocaC: float?
+- M19LongitudMaximaDelCentroDelOjoAlCentroDelOidoLR: float?
+- M19LongitudMaximaDelCentroDelOjoAlCentroDelOidoC: float?
+- M20LongitudMaximaDelCentroDelOjoAlCentroDelOrificioRespiratorioLR: float?
+- M20LongitudMaximaDelCentroDelOjoAlCentroDelOrificioRespiratorioC: float?
+- M21LongitudMaximaDelOrificioRespiratorioC: float?
+- M22AnchoMaximoDelOrificioRespiratorioC: float?
+- M23AnchoMaximoDeLaAletaPectoralLR: float?
+- M24LongitudMaximaDeLaAletaPectoralEnLaParteAnteriorLR: float?
+- M25LongitudMaximaDeLaAletaPectoralEnLaPartePosteriorLR: float?
+- M26AlturaDeLaAletaDorsal: float?
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>685</x><y>1060</y><w>275</w><h>285</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+RegistroMorfometricoPinnipedos
+--
++ Id: int
++ LRNarizAColaCm: float?
++ LCNarizAColaCm: float?
++ CCuerpoDetrasDePectorales: float?
++ CCuerpoANivelDelOmbligo: float?
++ LNarizAlCentroDelOjo: float?
++ LNarizAlCentroDelOido: float?
++ LAletaPectoralEnParteAnterior: float?
++ AAletaPectoralANivelAxila: float?
++ AMaximoDeAletapectora: float?
++ LAletaPosteriorParteAnterior: float?
++ AnchoMaximoAletaPosterior: float?
++ LCola: float?
++ ECapaDeGrasa: float?
++ CCraneoAlturaDeOrejas: float?
++ ARostro: float?
++ ACabeza: float?
++ LCabeza: float?
++ LPoscaninosSuperiores: float?
++ AnchoInterorbital: float?
++ AnchoCigomatico: float?
++ AnchoCondilobasal: float?
++ MaxilarIzquierdoPosCanino: float?
++ MaxilarIzquierdoCanino: float?
++ MaxilarIzquierdoIncisivo: float?
++ MaxilarDerechoPosCanino: float?
++ MaxilarDerechoCanino: float?
++ MaxilarDerechoIncisivo: float?
++ MandibulaIzquierdoPosCanino: float?
++ MandibulaIzquierdoCanino: float?
++ MandibulaIzquierdoIncisivo: float?
++ MandibulaDerechoPosCanino: float?
++ MandibulaDerechoCanino: float?
++ MandibulaDerechoIncisivo: float?</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1055</x><y>1065</y><w>275</w><h>285</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+RegistroMorfometricoPinnipedos
+--
++ Id: int
++ ExtremoHocicoAExtremoAletaCaudalL: float?
++ ExtremoHocicoAExtremoAletaCaudalC: float?
++ ExtremoHocicoACentroAno: float?
++ ExtremoHocicoAAberturaGenital: float?
++ ExtremoHocicoACentroOmbligo: float?
++ ExtremoHocicoAOrigenAnteriorDeAletasPectorales: float?
++ ExtremoHocicoACentroOjo: float?
++ ExtremoHocicoACentroMeatoAuditivoExterno: float?
++ CentroOjoACentroMeatoAuditivoExterno: float?
++ DistanciaOjoAOjoDorso: float?
++ CentroOjoAlCentroAberturaNasal: float?
++ AletaPectoralOrigenAnteriorAlExtremo: float?
++ AletaPectoralDeAxilaAlExtremo: float?
++ AnchoMaxAletaPectoral: float?
++ LonguitudPerpenticularTetillasDerechas: float?
++ LonguitudPerpenticularTetillasIzquierdas: float?
++ BaseAletaCaudalAlExtremo: float?
++ AnchoMaxAletaCaudal: float?
++ DiametroNivelDeBaseAletaCaudal: float?
++ DiametroNivelAno: float?
++ DiametroNivelOmbligo: float?
++ DiametroNivelAxila: float?
++ GrosorPielDorsal: float?
++ GrosorPielLateral: float?
++ GrosorPielVentral: float?
++ GrosorCapasGrasaSuperiorDerecha: float?
++ GrosorCapasGrasaSuperiorIzquierda: float?
++ GrosorCapasGrasaInferiorDerecha: float?
++ GrosorCapasGrasaInferiorIzquierda: float?
++ ResponsablesMorfometria: string
++ ResponsablesFormatoE1: string
++ GrosorCapasGrasaExternaDorsal: float?
++ GrosorCapasGrasaExternaLateral: float?
++ GrosorCapasGrasaExternaVentral: float?
++ GrosorCapasGrasaInternaDorsal: float?
++ GrosorCapasGrasaInternaLateral: float?
++ GrosorCapasGrasaInternaVentral: float?
++ NumeroDientesSuperiorDerecha: int?
++ NumeroDientesSuperiorIzquierda: int?
++ NumeroDientesInferiorDerecha: int?
++ NumeroDientesInferiorIzquierda: int?
++ Especimen: Especimen</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>70</y><w>130</w><h>135</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+Usuario
+--
++ Id: int
++ Nombre: string
++ CorreoElectronico: string
++ ApellidoPaterno: string
++ ApellidoMaterno: string
++ Institucion: string
++ TelefonoFijo: string
++ TelefonoMovil: string
++ Pais: string = "MX"
++ Estado: string = null
++ Ciudad: string
++ Calle: string
++ CodigoPostal: string
++ Aceptado: bool?
++ TipoDeUsuario: Origen</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>660</y><w>150</w><h>165</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+FormatoGeneral
+--
++ Id: int
++ TemperaturaAmbiente: float?
++ PrecipitacionHoy: float?
++ TemperaturaSupMar: float?
++ Marea: Marea
++ MareaMedida: float?
++ DireccionCorriente: DireccionCorriente
++ DireccionDelViento: DireccionDelViento
++ VelocidadDelViento: float?
++ Nubosidad: float?
++ Oleaje: float?
++ Beaufort: int
++ PrecipitacionTormentaPrevia: float?
++ AnormalidadGeomagnetica: bool
++ MareaRoja: bool
++ AnormalidadEnLaPesca: string
++ Observaciones: string
++ Aviso: Aviso
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>575</y><w>150</w><h>165</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+CaracteristicasExternas
+--
++ Id: int
++ TemperaturaAmbiente: float?
++ PrecipitacionHoy: float?
++ TemperaturaSupMar: float?
++ Marea: Marea
++ MareaMedida: float?
++ DireccionCorriente: DireccionCorriente
++ DireccionDelViento: DireccionDelViento
++ VelocidadDelViento: float?
++ Nubosidad: float?
++ Oleaje: float?
++ Beaufort: int
++ PrecipitacionTormentaPrevia: float?
++ AnormalidadGeomagnetica: bool
++ MareaRoja: bool
++ AnormalidadEnLaPesca: string
++ Observaciones: string
++ Aviso: Aviso
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>575</x><y>740</y><w>150</w><h>185</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+Especimen
+--
++ Id: int
++ Latitud: double? 
++ Longitud: double? 
++ EspecieId: int 
++ Especie: Especie 
++ FormatoGeneral: FormatoGeneral 
++ VaramientoMasivo: VaramientoMasivo 
++ UUID: string (NotMapped) 
++ Condicion: Condicion 
++ LongitudTotalRectilinea: float? 
++ Peso: float? 
++ Sexo: Sexo 
++ GrupoDeEdad: GrupoDeEdad 
++ OrientacionDelEspecimen: string 
++ HeridasBala: string 
++ PresenciaDeRedes: string 
++ Mordidas: string 
++ Golpes: string 
++ OtroTipoDeHeridas: string 
++ Sustrato: Sustrato 
++ OtroSustrato: string </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>475</y><w>275</w><h>45</h></coordinates><panel_attributes>
+lt=&lt;.</panel_attributes><additional_attributes>530;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>305</x><y>515</y><w>120</w><h>195</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>220;10;10;370</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>520</y><w>55</w><h>65</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;110</additional_attributes></element><element><id>Relation</id><coordinates><x>645</x><y>580</y><w>180</w><h>165</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+
+
+m2=...n
+
+
+
+</panel_attributes><additional_attributes>340;10;10;310</additional_attributes></element><element><id>Relation</id><coordinates><x>495</x><y>920</y><w>120</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>220;10;10;280</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>920</y><w>130</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;240;280</additional_attributes></element><element><id>Relation</id><coordinates><x>155</x><y>895</y><w>430</w><h>175</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>840;10;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>905</y><w>445</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;870;320</additional_attributes></element><element><id>Relation</id><coordinates><x>775</x><y>90</y><w>85</w><h>65</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;150;10;150;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>645</x><y>365</y><w>105</w><h>95</h></coordinates><panel_attributes>&lt;&lt;dataType&gt;&gt;
+Recorrido
+
+--
+- latitudInicial: double
+- fecha: date
+- horaInicio: time
+- observaciones: string
+- referenciaInicial: string
+- longitudFinal: double
+- latitudFinal: double
+- fechaInicio: double
+- participantes: string
+- horaFinal: time
+- distanciaRecorrida: double
+- longitudInicial: double
+- referenciaFinal: string
+- coordenadas: string[]
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>595</x><y>315</y><w>110</w><h>60</h></coordinates><panel_attributes>
+lt=&lt;.</panel_attributes><additional_attributes>200;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>455</x><y>5</y><w>530</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;40;1040;10</additional_attributes></element></diagram>
